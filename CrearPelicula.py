@@ -13,7 +13,7 @@ def log(tipo, log_datos): # log estandar en formato json
     print(json.dumps(log_estandar, default=str))
 
 
-def lambda_handler(event):
+def lambda_handler(event, context):
     try: 
         # Entrada (json)
         log('INFO', {'mensaje': 'Evento recibido', 'event': event})
